@@ -1,4 +1,5 @@
 import Notify from "@/components/Notify";
+import { getSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { BiAddToQueue } from "react-icons/bi";
@@ -76,3 +77,15 @@ const AddTodo = () => {
 };
 
 export default AddTodo;
+
+export async function getServerSideProps({ req }) {
+  const session = await getSession({ req });
+  if (!session) {
+    return {
+      redirect: { destination: "/auth/login" },
+    };
+  }
+  return {
+    props: {},
+  };
+}
