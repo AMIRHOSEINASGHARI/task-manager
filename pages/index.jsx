@@ -92,7 +92,7 @@ const Home = () => {
         </div>
       </div>
     );
-  } else if (todos.length === 0) {
+  } else if (todos.length === 0 && !data) {
     return (
       <div className="min-h-screen space-y-10 mt-24 lg:mt-44 px-3 lg:px-6 flex items-center flex-col">
         <HomeLoader />
