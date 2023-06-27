@@ -22,14 +22,14 @@ const Dashboard = () => {
       [e.target.name]: e.target.value,
     });
   };
-  useEffect(() => {
-    fetchUser();
-  }, []);
   const fetchUser = async () => {
     const res = await fetch("/api/user");
     const data = await res.json();
     if (data.status === "success") setUser(data.data);
   };
+  useEffect(() => {
+    fetchUser();
+  }, []);
   const unCompleted =
     user?.todos?.filter((todo) => todo.status === "uncompleted") || [];
   const doing = user?.todos?.filter((todo) => todo.status === "doing") || [];

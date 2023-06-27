@@ -13,10 +13,6 @@ const Home = () => {
   const situations = ["all", "uncompleted", "doing", "done"];
   const [data, setData] = useState(null);
 
-  useEffect(() => {
-    fetchTodos();
-  }, []);
-
   const fetchTodos = async () => {
     const res = await fetch("/api/user");
     const data = await res.json();
@@ -25,6 +21,10 @@ const Home = () => {
       setData(data.data);
     }
   };
+
+  useEffect(() => {
+    fetchTodos();
+  }, []);
 
   const filterBtnStyles = {
     allStyle:
