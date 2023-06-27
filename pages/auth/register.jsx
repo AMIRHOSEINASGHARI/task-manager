@@ -5,6 +5,7 @@ import { RiEyeLine, RiEyeOffLine } from "react-icons/ri";
 import Notify from "@/components/Notify";
 import Loader from "@/components/Loader";
 import { useRouter } from "next/router";
+import { getSession } from "next-auth/react";
 
 const Register = () => {
   const router = useRouter();
@@ -117,3 +118,15 @@ const Register = () => {
 };
 
 export default Register;
+
+export async function getServerSideProps({ req }) {
+  const session = await getSession({ req });
+  if (session) {
+    return {
+      redirect: { destination: "/" },
+    };
+  }
+  return {
+    props: {},
+  };
+}

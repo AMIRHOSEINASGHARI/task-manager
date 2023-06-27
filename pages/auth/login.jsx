@@ -5,7 +5,7 @@ import { RiEyeLine, RiEyeOffLine } from "react-icons/ri";
 import Notify from "@/components/Notify";
 import Loader from "@/components/Loader";
 import { useRouter } from "next/router";
-import { signIn } from "next-auth/react";
+import { getSession, signIn } from "next-auth/react";
 
 const Login = () => {
   const router = useRouter();
@@ -88,3 +88,15 @@ const Login = () => {
 };
 
 export default Login;
+
+export async function getServerSideProps({ req }) {
+  const session = await getSession({ req });
+  if (session) {
+    return {
+      redirect: { destination: "/" },
+    };
+  }
+  return {
+    props: {},
+  };
+}
