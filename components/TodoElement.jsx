@@ -26,14 +26,11 @@ const TodoElement = ({ todo, fetchTodos }) => {
     }
   };
   return (
-    <div
-      onClick={() => setDots(false)}
-      className="rounded-3xl p-5 shadow shadow-slate-300 space-y-10 flex flex-col justify-between"
-    >
+    <div onClick={() => setDots(false)} className="home-todo-element">
       <div className="space-y-2">
         {/* dots and title */}
         <div className="flex justify-between">
-          <h1 className="font-bold w-[95%] text-blue-500 text-xl xl:text-2xl">
+          <h1 className="font-bold w-[95%] text-p_blue text-xl xl:text-2xl">
             {title}
           </h1>
           <div
@@ -76,9 +73,8 @@ const TodoElement = ({ todo, fetchTodos }) => {
         <div
           onClick={() => updateTodo(_id, "uncompleted")}
           className={`${
-            status === "uncompleted" &&
-            "bg-blue-500 text-white hover:bg-blue-600"
-          } cursor-pointer transition duration-100 ease-in-out shadow w-10 h-10 text-xl flex items-center justify-center rounded-2xl`}
+            status === "uncompleted" && "bg-p_blue text-white hover:bg-blue-600"
+          } todo-status-btn text-xl`}
         >
           <TbZzz />
         </div>
@@ -86,7 +82,7 @@ const TodoElement = ({ todo, fetchTodos }) => {
           onClick={() => updateTodo(_id, "doing")}
           className={`${
             status === "doing" && "bg-orange-500 text-white hover:bg-orange-600"
-          } cursor-pointer transition duration-100 ease-in-out shadow w-10 h-10 flex items-center justify-center rounded-2xl`}
+          } todo-status-btn`}
         >
           <GiProgression />
         </div>
@@ -94,7 +90,7 @@ const TodoElement = ({ todo, fetchTodos }) => {
           onClick={() => updateTodo(_id, "done")}
           className={`${
             status === "done" && "bg-green-500 text-white hover:bg-green-600"
-          } cursor-pointer transition duration-100 ease-in-out shadow w-10 h-10 text-xl flex items-center justify-center rounded-2xl`}
+          } todo-status-btn text-xl`}
         >
           <BsCheckAll />
         </div>

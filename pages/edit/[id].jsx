@@ -45,7 +45,7 @@ const Edit = ({ id }) => {
             placeholder="Title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            className="md:w-[700px] w-[270px] sm:w-[400px] border-b-2 border-blue-100 focus:border-blue-400 transition-all duration-300 focus:placeholder:text-blue-500 ease-in-out p-4 outline-none font-medium text-blue-500 placeholder:text-blue-300 placeholder:text-[14px]"
+            className="md:w-[700px] w-[270px] sm:w-[400px] border-b-2 border-s_blue focus:border-blue-400 transition-all duration-300 focus:placeholder:text-p_blue ease-in-out p-4 outline-none font-medium text-p_blue placeholder:text-blue-300 placeholder:text-[14px]"
           />
         </div>
         <div>
@@ -55,14 +55,14 @@ const Edit = ({ id }) => {
             type="text"
             value={des}
             onChange={(e) => setDes(e.target.value)}
-            className="md:w-[700px] w-[270px] sm:w-[400px] border-b-2 border-blue-100 focus:border-blue-400 transition-all duration-300 focus:placeholder:text-blue-500 ease-in-out p-4 outline-none font-medium text-blue-500 placeholder:text-blue-300 placeholder:text-[14px]"
+            className="md:w-[700px] w-[270px] sm:w-[400px] border-b-2 border-s_blue focus:border-blue-400 transition-all duration-300 focus:placeholder:text-p_blue ease-in-out p-4 outline-none font-medium text-p_blue placeholder:text-blue-300 placeholder:text-[14px]"
           />
         </div>
       </div>
       <div className="flex items-center justify-center ">
         <button
           onClick={editHandler}
-          className="bg-blue-500 font-bold flex items-center justify-center  py-2.5 px-6 hover:bg-blue-600 hover:outline hover:outline-offset-2 hover:outline-blue-400 text-white rounded-full transition-all duration-150 ease-out"
+          className="bg-p_blue font-bold flex items-center justify-center  py-2.5 px-6 hover:bg-blue-600 hover:outline hover:outline-offset-2 hover:outline-blue-400 text-white rounded-full transition-all duration-150 ease-out"
         >
           {loading ? <Loader /> : "Save"}
         </button>

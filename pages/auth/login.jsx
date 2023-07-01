@@ -35,7 +35,7 @@ const Login = () => {
     <div className="min-h-screen flex flex-col items-center justify-center p-3 mt-14">
       {/* icon section */}
       <div className="flex flex-col items-center space-y-3">
-        <div className="bg-blue-500 rounded-full p-4 outline outline-blue-300 outline-offset-2 text-white text-4xl">
+        <div className="bg-p_blue rounded-full p-4 outline outline-blue-300 outline-offset-2 text-white text-4xl">
           <IoLogInOutline />
         </div>
         <div className="font-bold text-blue-400">
@@ -47,16 +47,16 @@ const Login = () => {
           <div>
             <input
               autoFocus
-              className="w-[250px] md:w-[400px] outline-none border-b-2 border-blue-100 focus:border-blue-400 transition-all duration-300 focus:placeholder:text-blue-500 ease-in-out font-medium text-blue-500 placeholder:text-blue-300 placeholder:text-[14px] py-3 md:py-5 md:px-6 px-5"
+              className="w-[250px] md:w-[400px] outline-none border-b-2 border-s_blue focus:border-blue-400 transition-all duration-300 focus:placeholder:text-p_blue ease-in-out font-medium text-p_blue placeholder:text-blue-300 placeholder:text-[14px] py-3 md:py-5 md:px-6 px-5"
               type="email"
               placeholder="Email..."
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
-          <div className="flex items-center w-[250px] md:w-[400px] border-b-2 border-blue-100">
+          <div className="flex items-center w-[250px] md:w-[400px] border-b-2 border-s_blue">
             <input
-              className="outline-none bg-transparent focus:border-blue-400 transition-all duration-300 focus:placeholder:text-blue-500 ease-in-out font-medium text-blue-500 placeholder:text-blue-300 placeholder:text-[14px] py-3 md:py-5 md:px-6 pl-5"
+              className="outline-none bg-transparent focus:border-blue-400 transition-all duration-300 focus:placeholder:text-p_blue ease-in-out font-medium text-p_blue placeholder:text-blue-300 placeholder:text-[14px] py-3 md:py-5 md:px-6 pl-5"
               type={eyeOpen ? "text" : "password"}
               placeholder="Password..."
               value={password}
@@ -79,7 +79,7 @@ const Login = () => {
       </div>
       <div className="flex items-center justify-center mt-3 space-x-1">
         <p className="text-sm text-gray-500">Don't have an account?</p>
-        <Link href="/auth/register" className="font-bold text-blue-500">
+        <Link href="/auth/register" className="font-bold text-p_blue">
           Sign up
         </Link>
       </div>

@@ -84,7 +84,7 @@ const Home = () => {
         <div className="flex items-center justify-center">
           <Link
             href="/add-todo"
-            className="capitalize bg-blue-500 text-white font-bold rounded-full flex items-center justify-center py-3 px-6 w-fit"
+            className="capitalize bg-p_blue text-white font-bold rounded-full flex items-center justify-center py-3 px-6 w-fit"
           >
             <BiAddToQueue className="mr-4 lg:text-2xl" />
             add more
@@ -110,7 +110,7 @@ const Home = () => {
           </h1>
         </div>
         <Link
-          className="uppercase font-black bg-blue-500 rounded-full py-3 px-8 text-white"
+          className="uppercase font-black bg-p_blue rounded-full py-3 px-8 text-white"
           href="/add-todo"
         >
           add todos

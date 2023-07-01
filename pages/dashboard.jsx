@@ -40,19 +40,19 @@ const Dashboard = () => {
         <div className="flex flex-col items-center">
           <div className="space-y-4 flex flex-col items-center lg:space-y-0 lg:flex-row lg:items-center lg:justify-center lg:space-x-5">
             <div className="flex items-center space-x-3 shadow rounded-xl py-2 px-4 w-fit">
-              <span className="text-sm text-blue-500">Name:</span>
+              <span className="text-sm text-p_blue">Name:</span>
               <p className="uppercase rounded-full bg-slate-50 font-black text-gray-500 py-2 px-4">
                 {user?.name}
               </p>
             </div>
             <div className="flex items-center space-x-3 shadow rounded-xl py-2 px-4 w-fit">
-              <span className="text-sm text-blue-500">Last Name:</span>
+              <span className="text-sm text-p_blue">Last Name:</span>
               <p className="uppercase rounded-full bg-slate-50 font-black text-gray-500 py-2 px-4">
                 {user?.lastName}
               </p>
             </div>
             <div className="flex items-center space-x-3 shadow rounded-xl py-2 px-4 w-fit">
-              <span className="text-sm text-blue-500">Email:</span>
+              <span className="text-sm text-p_blue">Email:</span>
               <p className="rounded-full bg-slate-50 font-black text-gray-500 py-2 px-4">
                 {user?.email}
               </p>
@@ -123,7 +123,7 @@ const Dashboard = () => {
                     {user?.todos?.length}
                   </p>
                 </div>
-                <div className="text-blue-500 flex items-center justify-center border border-slate-100 space-x-5 shadow-lg shadow-slate-200 rounded-xl py-4 px-10">
+                <div className="text-p_blue flex items-center justify-center border border-slate-100 space-x-5 shadow-lg shadow-slate-200 rounded-xl py-4 px-10">
                   <span>Uncompleted</span>
                   <p className="text-2xl md:text-5xl font-bold">
                     {unCompleted.length}

@@ -6,3 +6,25 @@
 body {
   font-family: "Montserrat";
 }
+
+:root {
+  --primary-blue: #3b82f6; /* 500 */
+  --secondary-blue: #dbeafe; /* 100 */
+  --primary-slate: #64748b; /* 500 */
+  --secondary-slate: #e2e8f0; /* 200 */
+  --primary-green: #22c55e; /* 500 */
+  --secondary-green: #bbf7d0; /* 200 */
+  --primary-orange: #f97316; /* 500 */
+  --secondary-orange: #fed7aa; /* 200 */
+  --primary-gray: #4b5563; /* 600 */
+  --secondary-gray: #e5e7eb; /* 200 */
+}
+
+@layer components {
+  .home-todo-element {
+    @apply rounded-3xl p-5 shadow shadow-slate-300 space-y-10 flex flex-col justify-between;
+  }
+  .todo-status-btn {
+    @apply cursor-pointer transition duration-100 ease-in-out shadow w-10 h-10 flex items-center justify-center rounded-2xl;
+  }
+}

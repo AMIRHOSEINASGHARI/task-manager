@@ -49,7 +49,7 @@ const AddTodo = () => {
             value={todo.title}
             name="title"
             onChange={changeHandler}
-            className="md:w-[700px] w-[270px] sm:w-[400px] border-b-2 border-blue-100 focus:border-blue-400 transition-all duration-300 focus:placeholder:text-blue-500 ease-in-out p-4 outline-none font-medium text-blue-500 placeholder:text-blue-300 placeholder:text-[14px]"
+            className="md:w-[700px] w-[270px] sm:w-[400px] border-b-2 border-s_blue focus:border-blue-400 transition-all duration-300 focus:placeholder:text-p_blue ease-in-out p-4 outline-none font-medium text-p_blue placeholder:text-blue-300 placeholder:text-[14px]"
           />
         </div>
         <div>
@@ -60,14 +60,14 @@ const AddTodo = () => {
             value={todo.des}
             name="des"
             onChange={changeHandler}
-            className="md:w-[700px] w-[270px] sm:w-[400px] border-b-2 border-blue-100 focus:border-blue-400 transition-all duration-300 focus:placeholder:text-blue-500 ease-in-out p-4 outline-none font-medium text-blue-500 placeholder:text-blue-300 placeholder:text-[14px]"
+            className="md:w-[700px] w-[270px] sm:w-[400px] border-b-2 border-s_blue focus:border-blue-400 transition-all duration-300 focus:placeholder:text-p_blue ease-in-out p-4 outline-none font-medium text-p_blue placeholder:text-blue-300 placeholder:text-[14px]"
           />
         </div>
       </div>
       <div className="flex items-center justify-center ">
         <button
           onClick={addHandler}
-          className="bg-blue-500 flex items-center justify-center md:w-20 md:h-20 w-14 h-14 hover:bg-blue-600 hover:outline hover:outline-offset-2 hover:outline-blue-400 text-white rounded-full transition-all duration-150 ease-out"
+          className="bg-p_blue flex items-center justify-center md:w-20 md:h-20 w-14 h-14 hover:bg-blue-600 hover:outline hover:outline-offset-2 hover:outline-blue-400 text-white rounded-full transition-all duration-150 ease-out"
         >
           <BiAddToQueue className="text-2xl" />
         </button>

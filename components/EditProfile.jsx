@@ -51,7 +51,7 @@ const EditProfile = ({
         <div>
           <input
             autoFocus
-            className="w-[250px] md:w-[400px] outline-none border-b-2 border-blue-100 focus:border-blue-400 transition-all duration-300 focus:placeholder:text-blue-500 ease-in-out font-medium text-blue-500 placeholder:text-blue-300 placeholder:text-[14px] py-3 md:py-5 md:px-6 px-5"
+            className="w-[250px] md:w-[400px] outline-none border-b-2 border-s_blue focus:border-blue-400 transition-all duration-300 focus:placeholder:text-p_blue ease-in-out font-medium text-p_blue placeholder:text-blue-300 placeholder:text-[14px] py-3 md:py-5 md:px-6 px-5"
             name="name"
             type="text"
             placeholder="Name..."
@@ -61,7 +61,7 @@ const EditProfile = ({
         </div>
         <div>
           <input
-            className="w-[250px] md:w-[400px] outline-none border-b-2 border-blue-100 focus:border-blue-400 transition-all duration-300 focus:placeholder:text-blue-500 ease-in-out font-medium text-blue-500 placeholder:text-blue-300 placeholder:text-[14px] py-3 md:py-5 md:px-6 px-5"
+            className="w-[250px] md:w-[400px] outline-none border-b-2 border-s_blue focus:border-blue-400 transition-all duration-300 focus:placeholder:text-p_blue ease-in-out font-medium text-p_blue placeholder:text-blue-300 placeholder:text-[14px] py-3 md:py-5 md:px-6 px-5"
             type="text"
             name="lastName"
             placeholder="Last Name..."
@@ -71,7 +71,7 @@ const EditProfile = ({
         </div>
         <div>
           <input
-            className="w-[250px] md:w-[400px] outline-none border-b-2 border-blue-100 focus:border-blue-400 transition-all duration-300 focus:placeholder:text-blue-500 ease-in-out font-medium text-blue-500 placeholder:text-blue-300 placeholder:text-[14px] py-3 md:py-5 md:px-6 px-5"
+            className="w-[250px] md:w-[400px] outline-none border-b-2 border-s_blue focus:border-blue-400 transition-all duration-300 focus:placeholder:text-p_blue ease-in-out font-medium text-p_blue placeholder:text-blue-300 placeholder:text-[14px] py-3 md:py-5 md:px-6 px-5"
             type="email"
             name="email"
             placeholder="Email..."
