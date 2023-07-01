@@ -14,22 +14,22 @@ const Header = () => {
   const { status, data } = useSession();
   return (
     <header className="fixed top-0 right-0 left-0 z-10">
-      <div className="bg-blue-500 text-white flex items-center justify-between relative p-3 xl:p-6">
+      <div className="backdrop-blur-2xl shadow-lg shadow-slate-100 text-blue-500 flex items-center justify-between relative p-3 xl:p-6">
         {/* logo section */}
         <Link href="/" className="flex items-center space-x-3 lg:text-2xl">
           <BsFillClipboardCheckFill className="lg:text-4xl" />
           <span className="font-extrabold uppercase">Task Manager</span>
         </Link>
         {/* mobile menu section */}
-        <div className="lg:hidden">
+        <div className="xl:hidden">
           {menu ? (
-            <div className="flex flex-col justify-between absolute z-20 bg-blue-500 top-0 right-0 p-5 h-screen">
+            <div className="flex flex-col justify-between absolute z-20 bg-white shadow-xl top-0 right-0 p-5 h-screen">
               <div className="space-y-5">
                 <div
                   onClick={() => setMenu(false)}
                   className="flex flex-row-reverse"
                 >
-                  <TfiClose className="text-white cursor-pointer" />
+                  <TfiClose className="text-blue-500 cursor-pointer" />
                 </div>
                 {/* navbar ul list */}
                 <ul className="space-y-5">
@@ -79,7 +79,7 @@ const Header = () => {
                       signOut();
                       setMenu(false);
                     }}
-                    className="flex items-center justify-center space-x-1 rounded-full py-1 px-3 text-sm bg-white text-blue-500"
+                    className="flex items-center justify-center space-x-1 rounded-full py-1 px-3 text-sm bg-white text-blue-500 shadow-md"
                   >
                     <IoExitOutline />
                     <span className="font-bold">Log out</span>
@@ -96,7 +96,7 @@ const Header = () => {
           )}
         </div>
         {/* desktop menu section */}
-        <div className="lg:flex hidden items-center space-x-10">
+        <div className="xl:flex hidden items-center space-x-10">
           <ul className="space-x-10 flex items-center">
             <li>
               <Link className="space-x-2 flex items-center" href="/">
@@ -118,10 +118,10 @@ const Header = () => {
             </li>
           </ul>
           {status === "authenticated" ? (
-            <div className="flex items-center space-x-5 bg-white rounded-full py-2 px-5 text-blue-500">
+            <div className="flex items-center space-x-5 rounded-full shadow py-2 px-4">
               <button
                 onClick={() => signOut()}
-                className="flex items-center space-x-2"
+                className="flex items-center space-x-2 text-red-500"
               >
                 <IoExitOutline />
                 <span className="font-bold">Log out</span>
@@ -129,8 +129,8 @@ const Header = () => {
               <p>|</p>
               <Link className="font-bold" href="/dashboard">
                 {data &&
-                  (data.user.email.length > 10
-                    ? `${data.user.email.substring(0, 10)}...`
+                  (data.user.email.length > 20
+                    ? `${data.user.email.substring(0, 20)}...`
                     : data.user.email)}
               </Link>
             </div>
