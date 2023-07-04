@@ -6,11 +6,11 @@ import React, { useEffect, useState } from "react";
 import { BsUiChecksGrid } from "react-icons/bs";
 import { BiAddToQueue } from "react-icons/bi";
 import { HiArrowLongRight } from "react-icons/hi2";
+import FilterTodo from "@/components/FilterTodo";
 
 const Home = () => {
   const [todos, setTodos] = useState([]);
   const [filterTodos, setFilterTodos] = useState([]);
-  const situations = ["all", "uncompleted", "doing", "done"];
   const [data, setData] = useState(null);
 
   const fetchTodos = async () => {
@@ -26,51 +26,11 @@ const Home = () => {
     fetchTodos();
   }, []);
 
-  const filterBtnStyles = {
-    allStyle:
-      "bg-slate-100 hover:bg-slate-200 transition duration-100 ease-in-out flex items-center justify-center text-slate-600 border border-slate-200 font-black rounded-full py-2 px-5",
-    unCompletedStyles:
-      "bg-blue-100 hover:bg-blue-200 transition duration-100 ease-in-out flex items-center justify-center text-blue-600 border border-blue-200 font-black rounded-full py-2 px-5",
-    doingStyles:
-      "bg-orange-100 hover:bg-orange-200 transition duration-100 ease-in-out flex items-center justify-center text-orange-600 border border-orange-200 font-black rounded-full py-2 px-5",
-    doneStyles:
-      "bg-green-100 hover:bg-green-200 transition duration-100 ease-in-out flex items-center justify-center text-green-600 border border-green-200 font-black rounded-full py-2 px-5",
-  };
-
   if (todos.length) {
     return (
       <div className="min-h-screen my-16 lg:mt-28 px-3 lg:px-6 space-y-5">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
-          {situations.map((item, index) => (
-            <button
-              onClick={() => {
-                if (item === "all") {
-                  setFilterTodos(todos);
-                } else {
-                  setFilterTodos(todos?.filter((todo) => todo.status === item));
-                }
-              }}
-              className={`${
-                item === "all"
-                  ? filterBtnStyles.allStyle
-                  : item === "uncompleted"
-                  ? filterBtnStyles.unCompletedStyles
-                  : item === "doing"
-                  ? filterBtnStyles.doingStyles
-                  : item === "done"
-                  ? filterBtnStyles.doneStyles
-                  : ""
-              } capitalize`}
-              key={index}
-            >
-              <span>{item === "all" ? "all tasks" : item}</span>
-              <h1 className="ml-3 lg:ml-5 text-2xl md:text-3xl lg:text-5xl">
-                {item === "all"
-                  ? todos.length
-                  : todos?.filter((todo) => todo.status === item).length}
-              </h1>
-            </button>
-          ))}
+        <div>
+          <FilterTodo todos={todos} setFilterTodos={setFilterTodos} />
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {filterTodos.length > 0

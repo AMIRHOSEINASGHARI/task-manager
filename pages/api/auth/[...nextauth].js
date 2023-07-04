@@ -4,7 +4,7 @@ import connectDB from "@/utils/connectDB";
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 
-export default NextAuth({
+export const authOptions = {
   session: { strategy: "jwt" },
   providers: [
     CredentialsProvider({
@@ -29,4 +29,6 @@ export default NextAuth({
       },
     }),
   ],
-});
+};
+
+export default NextAuth(authOptions);

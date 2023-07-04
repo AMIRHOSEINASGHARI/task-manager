@@ -27,4 +27,7 @@ body {
   .todo-status-btn {
     @apply cursor-pointer transition duration-100 ease-in-out shadow w-10 h-10 flex items-center justify-center rounded-2xl;
   }
+  .filter-todo-boxes {
+    @apply rounded-full flex items-center justify-center border px-4;
+  }
 }

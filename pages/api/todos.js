@@ -1,6 +1,7 @@
 import User from "@/models/user";
 import connectDB from "@/utils/connectDB";
-import { getSession } from "next-auth/react";
+import { authOptions } from "./auth/[...nextauth]";
+import { getServerSession } from "next-auth/next";
 
 export default async function handler(req, res) {
   //****/   connecting to data base function   /****//
@@ -13,12 +14,13 @@ export default async function handler(req, res) {
       .json({ status: "failed", message: "Cannot connect to data base" });
   }
   //****/   checking token existance   /****//
-  const session = await getSession({ req });
+  const session = await getServerSession(req, res, authOptions);
   if (!session) {
     return res
       .status(401)
       .json({ status: "failed", message: "You are not logged in!" });
   }
+  console.log(session);
   //****/   checking user existance   /****//
   const user = await User.findOne({ email: session.user.email });
   if (!user) {
