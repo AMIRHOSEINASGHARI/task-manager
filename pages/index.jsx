@@ -5,7 +5,6 @@ import { getSession, useSession } from "next-auth/react";
 import React, { useEffect, useState } from "react";
 import { BsUiChecksGrid } from "react-icons/bs";
 import { BiAddToQueue } from "react-icons/bi";
-import { HiArrowLongRight } from "react-icons/hi2";
 import FilterTodo from "@/components/FilterTodo";
 
 const Home = () => {
@@ -41,13 +40,12 @@ const Home = () => {
                 <TodoElement key={index} todo={todo} fetchTodos={fetchTodos} />
               ))}
         </div>
-        <div className="flex items-center justify-center">
+        <div className="hidden xl:flex">
           <Link
             href="/add-todo"
-            className="capitalize bg-p_blue text-white font-bold rounded-full flex items-center justify-center py-3 px-6 w-fit"
+            className="capitalize bg-gray-100 hover:bg-s_gray transition duration-150 ease-in-out text-gray-500 font-bold rounded-full px-5 py-2 flex items-center w-fit mt-8"
           >
-            <BiAddToQueue className="mr-4 lg:text-2xl" />
-            add more
+            <BiAddToQueue className="lg:text-2xl mr-3" /> add more
           </Link>
         </div>
       </div>

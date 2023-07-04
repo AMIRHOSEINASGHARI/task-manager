@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { BsFillClipboardCheckFill } from "react-icons/bs";
 import { CiCircleList } from "react-icons/ci";
-import { BiAddToQueue } from "react-icons/bi";
+import { BiAddToQueue, BiPlus } from "react-icons/bi";
 import { GoPerson } from "react-icons/go";
 import { TfiClose } from "react-icons/tfi";
 import { RiMenu5Fill } from "react-icons/ri";
@@ -93,8 +93,16 @@ const Header = () => {
               )}
             </div>
           ) : (
-            <div onClick={() => setMenu(true)}>
-              <RiMenu5Fill className="text-xl cursor-pointer" />
+            <div className="flex items-center space-x-3">
+              <Link
+                href="/add-todo"
+                className="border-2 border-p_blue rounded-full"
+              >
+                <BiPlus className="text-xl text-p_blue" />
+              </Link>
+              <div onClick={() => setMenu(true)}>
+                <RiMenu5Fill className="text-xl text-p_blue cursor-pointer" />
+              </div>
             </div>
           )}
         </div>
