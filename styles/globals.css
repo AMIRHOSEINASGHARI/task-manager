@@ -22,7 +22,7 @@ body {
 
 @layer components {
   .home-todo-element {
-    @apply rounded-3xl p-5 shadow shadow-slate-300 space-y-10 flex flex-col justify-between;
+    @apply rounded-md py-4 px-5 shadow bg-white shadow-slate-300 flex flex-col justify-between;
   }
   .todo-status-btn {
     @apply cursor-pointer transition duration-100 ease-in-out shadow w-10 h-10 flex items-center justify-center rounded-2xl;
