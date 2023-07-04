@@ -1,5 +1,4 @@
-import { useSession } from "next-auth/react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const FilterTodo = ({ todos, setFilterTodos }) => {
   const [selectValue, setSelectValue] = useState("all");

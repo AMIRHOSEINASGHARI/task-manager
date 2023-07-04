@@ -1,7 +1,7 @@
 import Link from "next/link";
 import TodoElement from "@/components/TodoElement";
 import HomeLoader from "@/components/HomeLoader";
-import { getSession, useSession } from "next-auth/react";
+import { getSession } from "next-auth/react";
 import React, { useEffect, useState } from "react";
 import { BsUiChecksGrid } from "react-icons/bs";
 import { BiAddToQueue } from "react-icons/bi";
